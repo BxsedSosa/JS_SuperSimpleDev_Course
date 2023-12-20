@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock! Paper! Scissors!</title>
+  </head>
+  <body>
+    <h1>Rock Paper Scissors</h1>
+
+    <br>
+
+    <button onclick="
+
+      const cpuMove = pickCpuMove();   
+      
+      let result = '';
+
+      if (cpuMove === 'Rock') {
+        result = 'Its a tie';
+      } else if (cpuMove === 'Paper') {
+        result = 'You lose!';
+      } else if (cpuMove === 'Scissors') {
+        result = 'You win!';
+      }
+
+      alert(`You picked Rock. CPU picked ${cpuMove}. ${result}`);
+
+    ">Rock</button>
+
+    <button onclick="
+
+      const cpuMove = pickCpuMove();
+
+
+      let result = '';
+
+      if (cpuMove === 'Rock') {
+        result = 'You win!';
+      } else if (cpuMove === 'Paper') {
+        result = 'Its a tie';
+      } else if (cpuMove === 'Scissors') {
+        result = 'You lose!';
+      }
+
+      alert(`You picked Paper. CPU picked ${cpuMove}. ${result}`);
+
+    ">Paper</button>
+
+    <button onclick="
+
+      const cpuMove = pickCpuMove();
+      
+      let result = '';
+
+      if (cpuMove === 'Rock') {
+        result = 'You lose!';
+      } else if (cpuMove === 'Paper') {
+        result = 'You win!';
+      } else if (cpuMove === 'Scissors') {
+        result = 'Its a tie';
+      }
+
+      alert(`You picked Scissors. CPU picked ${cpuMove}. ${result}`);
+
+    ">Scissors</button>
+
+    <script>
+    
+      function pickCpuMove() {
+        
+        let cpuMove = '';
+
+        const randomNumber = Math.random();
+
+        if (randomNumber >= 0 && randomNumber < 1 / 3) {
+          cpuMove = 'Rock';
+        } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+          cpuMove = 'Paper';
+        } else if (randomNumber >= 2 / 3 && randomNumber < 1){
+          cpuMove = 'Scissors';
+        }
+
+        return cpuMove;
+      }
+
+    </script>
+  </body>
+</html>
