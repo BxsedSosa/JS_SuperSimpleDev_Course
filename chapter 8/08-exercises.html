@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <haed>
+
+  </haed>
+  <body>
+
+    <script>
+
+      const item1 = {
+        product: 'basketball',
+        price: 2095
+      }
+
+      const item2 = {
+        product: 'tennis ball',
+        price: 2000
+      }
+
+      console.log(item1)
+
+      item1.price += 500
+      console.log(item1.price)
+
+      item1['delivery-time'] = '3 days'
+      console.log(item1)
+
+      function comparePrice(item1, item2) {
+
+        if (item1.price < item2.price) {
+          console.log(item1.product, item1.price)
+        } else {
+          console.log(item2.product,
+          item2.price)
+        }
+
+      }
+
+      comparePrice(item1, item2)
+
+      function isSameProduct(item1, item2) {
+
+        if(item1.product === item2.product) {
+          console.log(true)
+        } else {
+          console.log(false)
+        }
+
+      }
+
+      isSameProduct(item1, item2)
+
+      console.log('GooD Morning'.toLowerCase())
+
+      console.log('Good Morning \n'.repeat(3))
+    </script>
+  </body>
+</html>
