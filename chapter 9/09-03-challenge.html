@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <!-- Code changes are at the bottom. -->
+
+    <p class='js-liveNumbers'></p>
+
+    <p>
+      <button onclick="
+        updateCalculation('1');
+        updateNumbers();
+      ">1</button>
+
+      <button onclick="
+        updateCalculation('2');
+        updateNumbers();
+      ">2</button>
+
+      <button onclick="
+        updateCalculation('3');
+        updateNumbers();
+      ">3</button>
+
+      <button onclick="
+        updateCalculation(' + ');
+        updateNumbers();
+      ">+</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('4');
+        updateNumbers();
+      ">4</button>
+
+      <button onclick="
+        updateCalculation('5');
+        updateNumbers();
+      ">5</button>
+
+      <button onclick="
+        updateCalculation('6');
+        updateNumbers();
+      ">6</button>
+
+      <button onclick="
+        updateCalculation(' - ');
+        updateNumbers();
+      ">-</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('7');
+        updateNumbers();
+      ">7</button>
+
+      <button onclick="
+        updateCalculation('8');
+        updateNumbers();
+      ">8</button>
+
+      <button onclick="
+        updateCalculation('9');
+        updateNumbers();
+      ">9</button>
+
+      <button onclick="
+        updateCalculation(' * ');
+        updateNumbers();
+      ">*</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('0');
+        updateNumbers();
+      ">0</button>
+
+      <button onclick="
+        updateCalculation('.');
+        updateNumbers();
+      ">.</button>
+
+      <button onclick="
+        calculation = eval(calculation);
+        console.log(calculation);
+        updateNumbers();
+
+
+        // Remember to save the calculation here.
+        localStorage.setItem('calculation', calculation);
+      ">=</button>
+
+      <button onclick="
+        updateCalculation(' / ');
+        updateNumbers();
+      ">/</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculation = '';
+        console.log(calculation);
+        updateNumbers();
+
+        // Remember to save the calculation here.
+        localStorage.setItem('calculation', calculation);
+      ">Clear</button>
+    </p>
+    
+
+    <script>
+      let calculation = localStorage.getItem('calculation') || '';
+
+      function updateCalculation(value) {
+        calculation += value;
+        console.log(calculation);
+        localStorage.setItem('calculation', calculation);
+      }
+
+      // Optional: you can also create a function in order
+      // to reuse this code.
+      function saveCalculation() {
+        localStorage.setItem('calculation', calculation);
+      }
+
+      function updateNumbers() {
+
+        document.querySelector('.js-liveNumbers')
+          .innerHTML = calculation
+      }
+    </script>
+  </body>
+</html>

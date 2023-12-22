@@ -5,33 +5,49 @@
     <button>9a</button>
     <button class="js-otherButton">9b</button>
     <br>
+
     <button class="js-heads" onclick="
-      headsOrTails()
+    document.querySelector('.js-results')
+      .innerHTML = 'You Chose: Heads';
     ">Heads</button>
+    
     <button class="js-tails" onclick="
-      headsOrTails()
+    document.querySelector('.js-results')
+      .innerHTML = `You Chose: Tails`;
     ">Tails</button>
+
     <p class="js-results"></p>
+
+    <input type="text" class="js-submitName" placeholder="Name" onkeydown="
+      typedNameKeyDown(event)
+    ">
+    <button class="js-submitButton" onclick="
+      submitNameButton()
+    ">Submit</button>
+
+    <p class="js-name-text"></p>
+
     <script>
-      console.log(document.querySelector('.js-tails'))
-      
-      document.querySelector('.js-otherButton').innerHTML = '9b Done!'
+      document.querySelector('.js-otherButton').innerHTML = '9b Done!';
 
-      function headsOrTails () {
+      function submitNameButton () {
 
-        console.log(document.querySelector('.js-heads'))
+        const inputElement = document.querySelector('.js-submitName');
+        let name = inputElement.value;
 
-        const heads = document.querySelector('.js-heads');
-        const tails = document.querySelector('.js-tails');
+        document.querySelector('.js-name-text')
+          .innerHTML = `Your name is: ${name}`;
 
-        if (heads.textContent === 'Heads') {
-          document.querySelector('.js-results')
-            .innerHTML = `You Chose: Heads`;
-        } else if (tails.textContent === 'Tails') {
-          document.querySelector('.js-results')
-            .innerHTML = `You Chose: Tails`;
-        }
       }
+
+      function typedNameKeyDown(event) {
+
+        if (event.key === 'Enter') {
+          submitNameButton()
+        }
+
+      }
+
     </script>
   </body>
 </html>
