@@ -1,0 +1,53 @@
+.addToCart {
+  background-color: rgb(255,216,20);
+  border: none;
+  font-family: Arial;
+  padding: 5px 35px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.requestNow {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: Arial;
+  cursor: pointer;
+}
+
+.scheduleForLater {
+  background-color: rgb(230,230,230);
+  color: black;
+  font-family: Arial;
+  font-weight: bold;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttonThree {
+  background-color: rgb(230,230,230);
+  color: black;
+  font-family: Arial;
+  font-weight: bold;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttonThreeClicked{
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: Arial;
+  cursor: pointer;
+}

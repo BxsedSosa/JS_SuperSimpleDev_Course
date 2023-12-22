@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>10h</title>
+    <link rel="stylesheet" href="10hstyles.css">
+  </head>
+  <body>
+    <!-- Answer is at the bottom. -->
+    <p>Amazon Shipping Calculator</p>
+    <input placeholder="Cost of order" class="js-cost-input" onkeydown="
+      handleCostKeydown(event);
+    ">
+    <button onclick="
+      calculateTotal();
+    ">Calculate</button>
+    <p class="js-total-cost"></p><p class="js-cost-error" style="color:red"></p>
+
+    <script src="10h.js"></script>
+  </body>
+</html>
